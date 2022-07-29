@@ -61,10 +61,12 @@
 <body>
 	<form>
 		<h3>login</h3>
+		
 		<input id="email" type="text" name="email" placeholder="Seu email..">
 		<input id="password" type="password" name="senha" placeholder="Sua senha">
-		<input type="submit" onclick="Enviar();" name="acao" value="Logar">
+		<input type="submit" onclick="Enviar();" name="login" value="Logar">
 	</form>
+	
 	<script>
 		var email = document.getElementById('email');
 		var password = document.getElementById('password');
@@ -82,17 +84,12 @@
 			password.style.borderColor = "#ccc"
 		});
 
-		function Enviar() {
-
-			var email= document.getElementById("email");
-			var password= document.getElementById("password");
-			if (email.value != "" & password.value != "") {
+		function Enviar(){
+			if (email.value == "jcas3@aluno.ifal.edu.br" & password.value == "123456") {
 				alert('Login efetuado com sucesso');
-				
 			}else{
-				alert('Usuário ou senha incorreta')
+				alert('Usuário ou Senha incorreta')
 			}
-
 		}
 	</script>
 </body>
