@@ -63,7 +63,7 @@
 		<h3>login</h3>
 		<input id="email" type="text" name="email" placeholder="Seu email..">
 		<input id="password" type="password" name="senha" placeholder="Sua senha">
-		<input type="submit" name="acao" value="Logar">
+		<input type="submit" onclick="Enviar();" name="acao" value="Logar">
 	</form>
 	<script>
 		var email = document.getElementById('email');
@@ -81,5 +81,18 @@
 		password.addEventListener('blur',()=>{
 			password.style.borderColor = "#ccc"
 		});
+
+		function Enviar() {
+
+			var email= document.getElementById("email");
+			var password= document.getElementById("password");
+			if (email.value != "" & password.value != "") {
+				alert('Login efetuado com sucesso');
+				
+			}else{
+				alert('Usuário ou senha incorreta')
+			}
+
+		}
 	</script>
 </body>
