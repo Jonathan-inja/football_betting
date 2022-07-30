@@ -34,9 +34,9 @@
             </p>
 
             <form>
-                <input type="text" placeholder="Email">
-                <input type="text" placeholder="Senha">
-                <input type="submit" value="Cadastres-se">
+                <input id="email_cad" type="text" placeholder="Email">
+                <input id="password_cad" type="text" placeholder="Senha">
+                <input type="submit" onclick="Cadastrar();" name="Cadastrar" value="Cadastres-se">
             </form>
 
         </aside>
@@ -45,5 +45,18 @@
             <img src="img/hosto.jpeg" alt="jogadores">
         </article>
     </main>
+    <script>
+        var email_cad = document.getElementById('email_cad');
+		var password_cad = document.getElementById('password_cad');
+
+        function Cadastrar(){
+            if (email_cad.value != "" & password_cad.value != "") {
+				window.location.href="./pages/pagina_logado.html";
+				alert('Cadastro efetuado com sucesso');
+			}else{
+				alert('Email ou Senha sem dados')
+			}
+        }
+    </script>
 </body>
 </html>
