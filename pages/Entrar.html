@@ -62,14 +62,14 @@
 	<form>
 		<h3>login</h3>
 		
-		<input id="email2" type="text" name="email" placeholder="Seu email..">
-		<input id="password2" type="password" name="senha" placeholder="Sua senha">
+		<input id="email" type="text" name="email" placeholder="Seu email..">
+		<input id="password" type="password" name="senha" placeholder="Sua senha">
 		<input type="submit" onclick="Enviar();" name="login" value="Logar">
 	</form>
 	
 	<script>
-		var email = document.getElementById('email2');
-		var password = document.getElementById('password2');
+		var email = document.getElementById('email');
+		var password = document.getElementById('password');
 
 		email.addEventListener('focus',()=>{
 			email.style.borderColor = "#4A5F6A"
@@ -85,12 +85,9 @@
 		});
 
 		function Enviar(){
-			var email2 = document.querySelector("#email2");
-            var password2 = document.querySelector("#password2");
-			if (email2.value == "jcas3@aluno.ifal.edu.br" & password2.value == "123456") {
+			if (email.value == "jcas3@aluno.ifal.edu.br" & password.value == "123456") {
+				window.location.href="./pagina_logado.html";
 				alert('Login efetuado com sucesso');
-				window.location.href="pagina_logado.html";
-				
 			}else{
 				alert('Usuário ou Senha incorreta')
 			}
