@@ -119,3 +119,16 @@ img{
     width: 600px;
     border-radius: 10px;
 }
+
+button{
+    height: 50px;
+    width: 50%;
+    background-color: rgb(29, 25, 223);
+    color: white;
+    font-weight: bold;
+    border-radius: 15px;
+    margin-top: 10px;
+}
+button:hover{
+    cursor: pointer;
+}

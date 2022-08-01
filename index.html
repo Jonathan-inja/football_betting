@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css">
     <title>Football Betting</title>
+
 </head>
 <body>
     <!-- BARRA COM LOGO E MENU -->
@@ -33,11 +34,12 @@
                 A Football Betting é a melhor experiência de apostas online disponivel, oferecendo a você as melhores cotações em quase todos os esportes, assim como em política, reality show, oscar, cassino, poker e basicamente tudo aquilo que você deseja apostar.
             </p>
 
-            <form>
-                <input id="email_cad" type="text" placeholder="Email">
-                <input id="password_cad" type="text" placeholder="Senha">
-                <input type="submit" onclick="Cadastrar();" name="Cadastrar" value="Cadastres-se">
-            </form>
+            <div style="display: flex; flex-direction: column;width: 60%;">
+                <input id="email1" type="text" name="email" placeholder="Email..">
+                <input id="password1" type="password" name="senha" placeholder="Senha">
+                <button onclick="Cadastrar()" >Cadastres-se</button>
+            </div>
+            
 
         </aside>
         <!-- Imagem -->
@@ -46,16 +48,16 @@
         </article>
     </main>
     <script>
-        var email_cad = document.getElementById('email_cad');
-		var password_cad = document.getElementById('password_cad');
-
         function Cadastrar(){
-            if (email_cad.value != "" & password_cad.value != "") {
-				window.location.href="./pages/pagina_logado.html";
-				alert('Cadastro efetuado com sucesso');
-			}else{
-				alert('Email ou Senha sem dados')
-			}
+            var email = document.querySelector("#email1");
+            var password = document.querySelector("#password1");
+            if (email.value != "" & password.value != "") {
+                alert('Login efetuado com sucesso');
+                window.location.href="./pages/pagina_logado.html";
+                
+            }else{
+                alert('Email ou Senha sem dados')
+            }
         }
     </script>
 </body>
